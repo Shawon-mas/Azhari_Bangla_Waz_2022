@@ -26,6 +26,7 @@
 
 
         <TextView
+            android:fontFamily="@font/kalpurush"
             android:layout_marginLeft="7dp"
             android:layout_toRightOf="@id/play_video"
             android:textSize="17sp"
