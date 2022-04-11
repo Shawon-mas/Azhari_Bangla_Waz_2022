@@ -15,7 +15,8 @@
         <activity android:name=".views.LifeActivity" />
         <activity android:name=".views.WazActivity" />
         <activity android:name=".views.LifeStoryLoad" />
-        <activity android:name=".views.MainActivity">
+        <activity android:name=".views.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
