@@ -3,6 +3,7 @@ package com.azhariwaz2022.azharibanglawaz2022.views;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,8 +27,10 @@ import es.dmoral.toasty.Toasty;
 import static android.content.ContentValues.TAG;
 
 public class MainActivity extends AppCompatActivity {
+    Context context;
     MaterialCardView materialCardView1,materialCardView2,materialCardView3,materialCardView4;
     AdView adView;
+
     private InterstitialAd mInterstitialAd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +49,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void interestialAds() {
-
+        String intAd=getApplicationContext().getString(R.string.interestial_ad);
         AdRequest adRequest = new AdRequest.Builder().build();
 
-        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest,
+        InterstitialAd.load(this,intAd, adRequest,
                 new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
